@@ -39,4 +39,17 @@ public class C04_AssertionMethodlari {
         Thread.sleep(3000);
         driver.close();
     }
+    @Test
+    public void test02(){
+    // titleTest => Sayfa başlığının “Rest” içermediğini(contains) test edin
+    String unExpectedUrl="Rest" ;
+    String actualTitle=driver.getTitle();
+
+    Assert.assertFalse(actualTitle.contains(unExpectedUrl));
+
+
+    }
+
+
+
 }
