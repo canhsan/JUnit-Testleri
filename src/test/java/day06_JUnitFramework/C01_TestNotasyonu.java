@@ -13,7 +13,7 @@ public class C01_TestNotasyonu {
     WebDriver driver;
 
     @Test
-    public void googleTest() {
+    public void googleTest() throws InterruptedException {
         mahserinDortAtlisi();
         driver.get("https://www.google.com");
 
@@ -25,11 +25,12 @@ public class C01_TestNotasyonu {
         } else {
             System.out.println("Google Testi FAİLED");
         }
+        Thread.sleep(3000);
         driver.close();
     }
 
     @Test
-    public void wiseTest() {
+    public void wiseTest() throws InterruptedException {
         mahserinDortAtlisi();
         driver.get("https://www.wisequarter.com");
 
@@ -41,12 +42,13 @@ public class C01_TestNotasyonu {
         } else {
             System.out.println("wisequarter Testi FAİLED");
         }
+        Thread.sleep(3000);
         driver.close();
     }
 
 
     @Test
-    public void amazonTest() {
+    public void amazonTest() throws InterruptedException {
         mahserinDortAtlisi();
         driver.get("https://www.amazon.com");
         WebElement amazonLogoElementi = driver.findElement(By.id("nav-logo-sprites"));
@@ -56,6 +58,7 @@ public class C01_TestNotasyonu {
         } else {
             System.out.println("Amzon testi FAİLED");
         }
+        Thread.sleep(3000);
         driver.close();
     }
 
