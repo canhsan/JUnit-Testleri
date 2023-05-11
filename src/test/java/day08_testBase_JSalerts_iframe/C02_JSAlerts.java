@@ -99,6 +99,7 @@ public class C02_JSAlerts extends TestBase {
         String actualSonucYazisi=driver.findElement(By.xpath("//*[@id='result']")).getText();
 
         Assert.assertTrue(actualSonucYazisi.contains(expectedIcerik));
+        System.out.println(expectedIcerik);
     }
 
 
