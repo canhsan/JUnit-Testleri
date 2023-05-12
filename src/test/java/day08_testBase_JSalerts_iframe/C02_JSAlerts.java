@@ -4,8 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import utilities.TestBase;
+import utilities.TestBaseBeforeClass;
 
-public class C02_JSAlerts extends TestBase {
+public class C02_JSAlerts extends TestBaseBeforeClass {
      /*
         Otomasyon yaparken iki tur alert ile karsilasabiliriz
         1- HTML alerts :
