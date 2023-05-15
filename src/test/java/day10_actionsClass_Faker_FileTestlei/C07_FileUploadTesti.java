@@ -33,7 +33,7 @@ public class C07_FileUploadTesti extends TestBase {
         WebElement chooseFileButonu = driver.findElement(By.xpath("//input[@id='file-upload']"));
 
         String herkesteFarkliOlan = System.getProperty("user.dir");
-        String herkesteAyniOlan = "/src/test/java/day10_actionsClass_Faker_FileTestleri/deneme.txt";
+        String herkesteAyniOlan = "/src/test/java/day10_actionsClass_Faker_FileTestlei/deneme.txt";
         String dosyaYolu= herkesteFarkliOlan+herkesteAyniOlan;
 
         chooseFileButonu.sendKeys(dosyaYolu);
