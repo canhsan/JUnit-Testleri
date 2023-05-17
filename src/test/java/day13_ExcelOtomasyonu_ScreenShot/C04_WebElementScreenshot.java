@@ -1,20 +1,17 @@
 package day13_ExcelOtomasyonu_ScreenShot;
 
-import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import utilities.ReusableMethods;
 import utilities.TestBase;
 
-import java.io.File;
-import java.io.IOException;
-
-public class C03_TumSayfaScreenshot extends TestBase {
+public class C04_WebElementScreenshot extends TestBase {
 
     @Test
-    public void test01() throws IOException {
-
+    public void test01(){
         // amazon anasayfaya gidelim
         driver.get("https://www.amazon.com");
 
@@ -29,18 +26,10 @@ public class C03_TumSayfaScreenshot extends TestBase {
         String expectedIcerik = "Nutella";
         Assert.assertTrue(actualSonucYazisi.contains(expectedIcerik));
 
-        // rapora eklenmek uzere, tum sayfanin ekran goruntusunu alalim
+        // rapora eklenmek uzere, sonuc elementinin ekran goruntusunu alalim
 
-        TakesScreenshot tss = (TakesScreenshot) driver;
-
-        File tumSayfaResim = new File("target/ekranResimleri/tumSayfaResim.png");
-
-        File geciciResim = tss.getScreenshotAs(OutputType.FILE);
-
-        FileUtils.copyFile(geciciResim,tumSayfaResim);
-
+        ReusableMethods.webelementFotografCek(driver,sonucElementi);
         ReusableMethods.tumSayfaFotografCek(driver);
-
 
     }
 }
